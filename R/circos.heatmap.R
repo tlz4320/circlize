@@ -489,7 +489,7 @@ circos.heatmap = function(mat, split = NULL, col, na.col = "grey",
 		        	rep(nc - i, nr), 
 		            (CELL_META$cell_middle + CELL_META$cell_width/2)[od], 
 		            rep(nc - i + 1, nr), 
-		            border = col_mat[, i], col = col_mat[, i])
+		            border = "white", col = col_mat[, i])
 		       }
 	    }
 
