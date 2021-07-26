@@ -301,7 +301,7 @@ circos.heatmap.validate = function(mat_list) {
 # -rownames.col Color of row names.
 # -show.sector.labels Whether to show sector labels.
 # -cell_width Relative widths of heatmap cells.
-# -cell_width2 fuck param
+# -cell_width2 fuck params
 # -... Pass to `circos.track` which draws the heatmap track.
 # 
 # == seealso
