@@ -477,18 +477,18 @@ circos.heatmap = function(mat, split = NULL, col, na.col = "grey",
 	    		} else {
 	    			# qqcat("@{sum(l)} white rectangles are not drawn.\n")
 	    			circos.rect(
-	    				(CELL_META$cell_middle - CELL_META$cell_width/2)[od][!l], 
+	    				(CELL_META$cell_middle - (CELL_META$cell_width/2 - rep(cell_width2, length(CELL_META$cell_width))))[od][!l], 
 	    				(rep(nc - i, nr))[!l], 
-			            (CELL_META$cell_middle + CELL_META$cell_width/2)[od][!l], 
+			            (CELL_META$cell_middle + (CELL_META$cell_width/2 - rep(cell_width2, length(CELL_META$cell_width))))[od][!l], 
 			            (rep(nc - i + 1, nr))[!l], 
 			            border = col_mat[, i][!l], 
 			            col = col_mat[, i][!l])
 	    		}
 	    	} else {
 		        circos.rect(
-		        	(CELL_META$cell_middle - (CELL_META$cell_width/2 - rep(cell_with2, length(CELL_META$cell_width))))[od], 
+		        	(CELL_META$cell_middle - (CELL_META$cell_width/2 - rep(cell_width2, length(CELL_META$cell_width))))[od], 
 		        	rep(nc - i, nr), 
-		            (CELL_META$cell_middle + (CELL_META$cell_width/2 - rep(cell_with2, length(CELL_META$cell_width))))[od], 
+		            (CELL_META$cell_middle + (CELL_META$cell_width/2 - rep(cell_width2, length(CELL_META$cell_width))))[od], 
 		            rep(nc - i + 1, nr), 
 		            border = "white", col = col_mat[, i])
 		       }
